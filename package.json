@@ -1,6 +1,6 @@
 {
   "name": "mb-trimwidth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A module of trim multibyte string by character width. This will work even if contained Unicode, emoji, and surrogate pairs.",
   "main": "dist-cjs/index.js",
   "module": "dist-esm/index.js",
