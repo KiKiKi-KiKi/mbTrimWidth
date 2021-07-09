@@ -1,0 +1,29 @@
+{
+  "name": "mb-trimwidth",
+  "version": "0.0.1",
+  "description": "A module of trim multibyte string by character width. This will work even if contained Unicode, emoji, and surrogate pairs.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiKiKi-KiKi/mbTrimWidth.git"
+  },
+  "keywords": [
+    "string",
+    "multibyte",
+    "trim",
+    "Unicode",
+    "emoji",
+    "surrogate pairs",
+    "width",
+    "substring"
+  ],
+  "author": "KiKiKi KiKi <https://twitter.com/KiKiKi_KiKi> (https://github.com/kikiki-kiki)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiKiKi-KiKi/mbTrimWidth/issues"
+  },
+  "homepage": "https://github.com/KiKiKi-KiKi/mbTrimWidth#readme",
+  "scripts": {
+    "test": "test"
+  }
+}
