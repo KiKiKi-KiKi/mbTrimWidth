@@ -25,5 +25,9 @@
   "homepage": "https://github.com/KiKiKi-KiKi/mbTrimWidth#readme",
   "scripts": {
     "test": "test"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
   }
 }
