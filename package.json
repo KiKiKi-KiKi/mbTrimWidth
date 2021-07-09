@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/KiKiKi-KiKi/mbTrimWidth#readme",
   "scripts": {
-    "build:cjs": "tsc --project . --module commonjs --outDir ./dist-cjs",
-    "build:esm": "tsc --project . --module esNext --outDir ./dist-esm",
+    "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir ./dist-cjs",
+    "build:esm": "tsc --project tsconfig.build.json --module esNext --outDir ./dist-esm",
     "build": "npm run build:cjs && npm run build:esm",
     "test": "jest --runInBand",
     "test:w": "jest --runInBand --watch",
