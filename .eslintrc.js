@@ -16,6 +16,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    'import/prefer-default-export': 'off',
     'newline-before-return': 'error',
     'no-console': 'warn',
     'no-var': 'error',
