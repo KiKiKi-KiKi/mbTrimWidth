@@ -1,5 +1,4 @@
-import { mbTrimWidth } from '../src/index';
-import { mbStringWidth } from '../src/mbStringWidth';
+import { mbTrimWidth, mbStringWidth } from '../src/index';
 
 describe('mbTrimWidth', () => {
   describe('English text', () => {
