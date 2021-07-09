@@ -8,5 +8,9 @@ export const mbTrimWidth: MbTrimWidth = (str, max, ellipsis) => {
     return str;
   }
 
+  if (maxLen < 0 && ellipsis) {
+    return [...strArray, ...ellipsis].slice(0, max).join('');
+  }
+
   return [...strArray.slice(0, maxLen), ellipsis].join('');
 };
