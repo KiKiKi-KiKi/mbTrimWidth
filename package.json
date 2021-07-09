@@ -2,7 +2,9 @@
   "name": "mb-trimwidth",
   "version": "0.0.1",
   "description": "A module of trim multibyte string by character width. This will work even if contained Unicode, emoji, and surrogate pairs.",
-  "main": "src/index.js",
+  "main": "dist-cjs/index.js",
+  "module": "dist-esm/index.js",
+  "types": "dist-cjs/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KiKiKi-KiKi/mbTrimWidth.git"
@@ -24,6 +26,9 @@
   },
   "homepage": "https://github.com/KiKiKi-KiKi/mbTrimWidth#readme",
   "scripts": {
+    "build:cjs": "tsc --project . --module commonjs --outDir ./dist-cjs",
+    "build:esm": "tsc --project . --module esNext --outDir ./dist-esm",
+    "build": "npm run build:cjs && npm run build:esm",
     "test": "test",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,ts}\"",
