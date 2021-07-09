@@ -16,6 +16,11 @@ describe('mbTrimWidth', () => {
       expect(trimText.length).toBe(10);
     });
 
+    test('When trim width > text length return origin text', () => {
+      const trimText = mbTrimWidth(str, 100);
+      expect(trimText).toBe(str);
+    });
+
     test('When trim width 0 return ""', () => {
       const trimText = mbTrimWidth(str, 0);
       expect(trimText).toBe('');
@@ -50,6 +55,11 @@ describe('mbTrimWidth', () => {
       const trimText = mbTrimWidth(str, 12, '…');
       expect(trimText).toBe('子もかっこうの「おじぎ…');
       expect(trimText.length).toBe(12);
+    });
+
+    test('When trim width > text length return origin text', () => {
+      const trimText = mbTrimWidth(str, 100);
+      expect(trimText).toBe(str);
     });
   });
 
