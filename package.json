@@ -32,7 +32,8 @@
     "test": "test",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,ts}\"",
-    "format": "prettier --write \"src/**/*.{js,ts}\""
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.2",
