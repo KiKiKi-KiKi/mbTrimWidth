@@ -27,8 +27,8 @@ describe('mbTrimWidth', () => {
       expect(trimText.length).toBe(0);
 
       const trimText2 = mbTrimWidth(str, 1, '…');
-      expect(trimText2).toBe('');
-      expect(trimText2.length).toBe(0);
+      expect(trimText2).toBe('L');
+      expect(trimText2.length).toBe(1);
     });
 
     test('When trim width < ellipsis width, ignore ellipsis', () => {
