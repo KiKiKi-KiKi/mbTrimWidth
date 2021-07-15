@@ -51,9 +51,9 @@ mbTrimWidth(str, 10, '…');
 mbTrimWidth(str, 0);
 // => ""
 mbTrimWidth(str, 1, '…');
-// => ""
+// => "L"
 mbTrimWidth(str, 1, '...');
-// => 'L'
+// => "L"
 
 const str = '子もかっこうの「おじぎ猫団」を窓がふみ戸棚ましです。';
 mbTrimWidth(str, 12);
