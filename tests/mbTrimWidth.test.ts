@@ -131,4 +131,24 @@ describe('mbTrimWidth', () => {
       expect(mbStringWidth(trimText)).toBe(9);
     });
   });
+
+  describe('Contains surrogate pairs emoji', () => {
+    const str = '私は👨‍👩‍👧‍👦と🏄🌊と🏕をします';
+
+    test('Check text length', () => {
+      console.log(str, 'length:', str.length);
+
+      expect(mbStringWidth(str)).toBe(12);
+    });
+  });
+
+  describe('Contains surrogate pairs text', () => {
+    const str = 'pͪoͣnͬpͣoͥnͭpͣa͡inͥ';
+
+    test('Check text length', () => {
+      console.log(str, 'length:', str.length);
+
+      expect(mbStringWidth(str)).toBe(10);
+    });
+  });
 });
