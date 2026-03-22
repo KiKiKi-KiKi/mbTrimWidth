@@ -1,8 +1,7 @@
 # mbTrimWidth
 
 [![NPM version](https://badgen.net/npm/v/mb-trimwidth)](https://www.npmjs.com/package/mb-trimwidth)
-[![Build Status](https://travis-ci.com/KiKiKi-KiKi/mbTrimWidth.svg?branch=main)](https://travis-ci.com/github/KiKiKi-KiKi/mbTrimWidth/)
-[![Coverage Status](https://coveralls.io/repos/github/KiKiKi-KiKi/mbTrimWidth/badge.svg?branch=main)](https://coveralls.io/github/KiKiKi-KiKi/mbTrimWidth?branch=main)
+[![CI](https://github.com/KiKiKi-KiKi/mbTrimWidth/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/KiKiKi-KiKi/mbTrimWidth/actions/workflows/ci.yml)
 [![ISC License](http://img.shields.io/badge/license-ISC-green.svg?style=flat)](https://github.com/KiKiKi-KiKi/mbTrimWidth/blob/master/package.json)
 
 A module of trim multibyte string by character width.
