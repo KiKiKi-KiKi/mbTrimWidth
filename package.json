@@ -5,6 +5,22 @@
   "main": "dist-cjs/index.js",
   "module": "dist-esm/index.js",
   "types": "dist-cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist-esm/index.d.ts",
+        "default": "./dist-esm/index.js"
+      },
+      "require": {
+        "types": "./dist-cjs/index.d.ts",
+        "default": "./dist-cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist-cjs",
+    "dist-esm"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KiKiKi-KiKi/mbTrimWidth.git"
@@ -26,8 +42,8 @@
   },
   "homepage": "https://github.com/KiKiKi-KiKi/mbTrimWidth#readme",
   "scripts": {
-    "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir ./dist-cjs",
-    "build:esm": "tsc --project tsconfig.build.json --module esNext --outDir ./dist-esm",
+    "build:cjs": "tsc --project tsconfig.build.json --module commonjs --outDir ./dist-cjs && echo '{\"type\":\"commonjs\"}' > dist-cjs/package.json",
+    "build:esm": "tsc --project tsconfig.build.json --module esNext --outDir ./dist-esm && echo '{\"type\":\"module\"}' > dist-esm/package.json",
     "build": "npm run build:cjs && npm run build:esm",
     "test": "jest --runInBand",
     "test:w": "jest --runInBand --watch",
@@ -38,18 +54,17 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
-    "@typescript-eslint/parser": "^4.28.2",
-    "coveralls": "^3.1.1",
-    "eslint": "^7.30.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "jest": "^27.0.6",
-    "prettier": "^2.3.2",
-    "ts-jest": "^27.0.3",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
+    "@eslint/js": "^9.0.0",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.0.0",
+    "jest": "^30.3.0",
+    "prettier": "^3.8.1",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
