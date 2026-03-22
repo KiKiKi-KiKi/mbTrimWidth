@@ -7,6 +7,20 @@
 A module of trim multibyte string by character width.
 This will work even if contained Unicode, emoji, and surrogate pairs.
 
+## Requirements
+
+This package uses [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/API/Intl/Segmenter) to correctly count grapheme clusters, including ZWJ emoji sequences (e.g. `👨‍👩‍👧‍👦`) and combining characters (e.g. `pͪ`).
+
+| Environment | Minimum version |
+|---|---|
+| Node.js | 16+ |
+| Chrome | 87+ |
+| Firefox | 125+ |
+| Safari | 14.1+ |
+
+> [!NOTE]
+> `Intl.Segmenter` is **not** available in older environments. If you need to support them, a polyfill such as [`@formatjs/intl-segmenter`](https://formatjs.io/docs/polyfills/intl-segmenter/) is required.
+
 ## install
 
 ```sh

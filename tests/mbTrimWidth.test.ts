@@ -113,7 +113,7 @@ describe('mbTrimWidth', () => {
     const str = '🌕の夜は𠮷野屋で𩸽を食べたい😇';
 
     test('Check text length', () => {
-      console.log(str, 'length:', str.length);
+      console.log(str, 'length:', str.length, 'mbStringWidth:', mbStringWidth(str));
 
       expect(str.length).toBe(19);
       expect(mbStringWidth(str)).toBe(15);
@@ -129,6 +129,26 @@ describe('mbTrimWidth', () => {
       const trimText = mbTrimWidth(str, 9, '…');
       expect(trimText).toBe('🌕の夜は𠮷野屋で…');
       expect(mbStringWidth(trimText)).toBe(9);
+    });
+  });
+
+  describe('Contains surrogate pairs emoji', () => {
+    const str = '私は👨‍👩‍👧‍👦と🏄🌊と🏕をします';
+
+    test('Check text length', () => {
+      console.log(str, 'length:', str.length, 'mbStringWidth:', mbStringWidth(str));
+
+      expect(mbStringWidth(str)).toBe(12);
+    });
+  });
+
+  describe('Contains surrogate pairs text', () => {
+    const str = 'pͪoͣnͬpͣoͥnͭpͣa͡inͥ';
+
+    test('Check text length', () => {
+      console.log(str, 'length:', str.length, 'mbStringWidth:', mbStringWidth(str));
+
+      expect(mbStringWidth(str)).toBe(10);
     });
   });
 });
